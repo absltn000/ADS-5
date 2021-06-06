@@ -5,22 +5,18 @@
 
 template<typename T>
 class TPQueue {
-
-private:
-
+ private:
   struct part {
     T t;
     part* next;
   };
   part* head;
 
-public:
-
+ public:
   TPQueue() :head(nullptr){}
   ~TPQueue() {
-    while (head)
-    {
-      part* lnext=head->next;
+    while (head) {
+      part* lnext = head->next;
       delete head;
       head = lnext;
     }
@@ -62,7 +58,7 @@ public:
         lbefore = lnext;
         lnext = lnext->next;
       }
-      if (er) 
+      if (er)
         lbefore->next = y;
     }
   }
