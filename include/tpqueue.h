@@ -13,7 +13,7 @@ class TPQueue {
   part* head;
 
  public:
-  TPQueue() :head(nullptr){}
+  TPQueue() :head(nullptr) {}
   ~TPQueue() {
     while (head) {
       part* lnext = head->next;
